@@ -1,30 +1,17 @@
-abstract class pen
-{
-    abstract void write();
-    abstract void refill();
-}
-class FountainPen extends pen
-{
-    void write()
-    {
-        System.out.println("I can write");
-    }
-    void refill()
-    {
-        System.out.println("I can refill");
-    }
-    void changeNib()
-    {
-        System.out.println("I can change nib");
-    }
+//package com.company;
+class app{
+    public int a = 2;
+    protected int b = 3;
+    int c = 4;
+    private int d = 5;
 }
 public class Main {
     public static void main(String[] args)
-
     {
-        FountainPen pen = new FountainPen();
-        pen.write();
-        pen.refill();
-        pen.changeNib();
+        app c = new app();
+        System.out.println(c.a);
+        System.out.println(c.b);
+        System.out.println(c.c);
+        System.out.println(c.d);
     }
 }
