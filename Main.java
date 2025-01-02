@@ -1,17 +1,25 @@
-//package com.company;
-class app{
-    public int a = 2;
-    protected int b = 3;
-    int c = 4;
-    private int d = 5;
+interface parent{
+    void meth1();
 }
+
+interface parent2{
+    void meth2(int a);
+}
+
 public class Main {
-    public static void main(String[] args)
-    {
-        app c = new app();
-        System.out.println(c.a);
-        System.out.println(c.b);
-        System.out.println(c.c);
-        System.out.println(c.d);
+    public static void main(String[] args) {
+        parent p1 = new parent() {
+            @Override
+            public void meth1() {
+                System.out.println("This is meth1");
+            }
+        };
+        p1.meth1();
+
+        parent2 p2 = (a) -> {
+            System.out.println("This is meth "+a);
+        };
+        p2.meth2(2);
     }
+
 }
