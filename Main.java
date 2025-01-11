@@ -1,15 +1,22 @@
-import java.util.Calendar;
-import java.util.TimeZone;
-
+import java.util.Scanner;
+class Employee
+{
+    int salary;
+    String name;
+    public Employee(int sal)
+    {
+        salary = sal;
+    }
+    public Employee()
+    {
+        salary = 10000;
+    }
+}
 public class Main {
-    public static void main(String[] args) {
-        Calendar c = Calendar.getInstance();
-        System.out.println(c.getCalendarType());
-        System.out.println(c.getTimeZone());
-        System.out.println(c.getTimeZone().getID());
-
-        Calendar c2 = Calendar.getInstance(TimeZone.getTimeZone("America/New_York"));
-        System.out.println(c2.getTimeZone().getID());
-        System.out.println(c2.getTime());;
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        Employee emp = new Employee();
+        System.out.println(emp.salary);
     }
 }
